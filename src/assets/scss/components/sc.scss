@@ -1,0 +1,81 @@
+body.sc {
+	font-family: 'Raleway', sans-serif;
+}
+.header {
+	a {
+		color: #000;
+		text-decoration: none;
+		&:hover {
+			color: #000;
+		}
+	}
+	.dropdown-menu {
+		position: absolute;
+		display: none;
+		top: 25px;
+		left: 0;
+		z-index: 20;
+		text-align: left;
+		background-color: #EEE;
+		display: none;
+		li {
+			display: block;
+		}
+	}
+}
+.fp {
+	.header {
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+		.logo {
+			font-size: 32px;
+			font-weight: bold;
+		}
+		nav.head-links {
+			margin: 10px 0 30px;
+			ul {
+				margin-left: 0;
+			}
+			li {
+				display: inline-block;
+				padding: 0 10px;
+				font-weight: 500;
+				cursor: pointer;
+				position: relative;
+				&:hover {
+					background-color: #EEE;
+					.dropdown-menu {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.fpslider {
+		.orbit-container {
+			height: 300px;
+			img.contain {
+				height: 300px;
+				width: auto;
+			}
+		}
+		.orbit-bullets {
+			button {
+				width: 0.7rem;
+				height: 0.7rem;
+			}
+		}
+		.orbit-caption {
+			@include breakpoint(small down) {
+				padding: 0.2rem 1rem;
+			}
+		}
+	}
+}
+
+.block-text {
+	.title {
+		text-decoration: underline;
+	}
+}
