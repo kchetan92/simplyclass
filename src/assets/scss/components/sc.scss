@@ -8,38 +8,21 @@ body.sc {
 		&:hover {
 			color: #000;
 		}
-	}
-	.dropdown-menu {
-		position: absolute;
-		display: none;
-		top: 25px;
-		left: 0;
-		z-index: 20;
-		text-align: left;
-		background-color: #EEE;
-		display: none;
-		li {
-			display: block;
+		&:visited {
+			color: #000;
 		}
 	}
-}
-.fp {
-	.header {
-		width: 100%;
-		text-align: center;
-		margin-top: 30px;
-		.logo {
-			font-size: 32px;
-			font-weight: bold;
-		}
-		nav.head-links {
-			margin: 10px 0 30px;
-			ul {
-				margin-left: 0;
-			}
-			li {
+	.logo {
+		font-size: 32px;
+		font-weight: bold;
+	}
+	nav.head-links {
+		margin: 10px 0 30px;
+		 > ul {
+			margin-left: 0;
+			> li {
 				display: inline-block;
-				padding: 0 10px;
+				padding: 5px 10px;
 				font-weight: 500;
 				cursor: pointer;
 				position: relative;
@@ -51,6 +34,49 @@ body.sc {
 				}
 			}
 		}
+		.dropdown-menu {
+			li {
+				padding: 10px;
+			}
+		}
+	}
+	.dropdown-menu {
+		min-width: 185px;
+		position: absolute;
+		top: 35px;
+		left: 0;
+		z-index: 20;
+		text-align: left;
+		background-color: #EEE;
+		display: none;
+		border-top: 5px solid #FFF;
+		ul {
+			margin: 0;
+		}
+		li {
+			display: block;
+			padding: 10px;
+			width: 100%;
+			border-bottom: 2px solid #DDD;
+			&:last-child {
+				border: none;
+			}
+			&:hover {
+				border-color: #000;
+				background-color: #000;
+				a {
+					color: #FFF;
+				}
+			}
+		}
+
+	}
+}
+.fp {
+	.header {
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
 	}
 	.fpslider {
 		.orbit-container {
