@@ -5,7 +5,11 @@ body.sc {
 	max-width: initial;
 }
 .header {
-	overflow: hidden;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 	a {
 		color: #000;
 		text-decoration: none;
@@ -93,6 +97,7 @@ body.sc {
 		.logo {
 			float: none;
 			padding: 0;
+			font-size: 40px;
 		}
 		nav.head-links {
 			padding: 0;
