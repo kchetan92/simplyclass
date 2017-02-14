@@ -4,7 +4,9 @@ body.sc {
 .row.fullWidth {
 	max-width: initial;
 }
+$sc_orange : #d1a562;
 .header {
+	background-color: $sc_orange;
 	&:after {
 		content: "";
 		display: table;
@@ -21,14 +23,18 @@ body.sc {
 		}
 	}
 	.logo {
-		font-size: 32px;
-		font-weight: bold;
+		img {
+			height: 120px;
+			padding: 20px 0;	
+		}
 		float: left;
-		padding: 30px;
+		.subTitle {
+			display: none;
+		}
 	}
 	nav.head-links {
 		float: right;
-		padding: 30px;
+		padding: 40px 30px 0 0;
 		 > ul {
 			margin-left: 0;
 			> li {
@@ -37,17 +43,32 @@ body.sc {
 				font-weight: 500;
 				cursor: pointer;
 				position: relative;
+				border: 2px solid black;
+				margin: 0 5px;
 				&:hover {
-					background-color: #EEE;
+					background-color: black;
+					a {
+						color: white;
+					}
 					.dropdown-menu {
 						display: block;
+						a {
+							color: black;
+						}
+						li {
+							&:hover {
+								a {
+									color: white;
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 		.dropdown-menu {
 			left: initial;
-			right: 0;
+			right: -2px;
 			li {
 				padding: 10px;
 			}
@@ -60,9 +81,9 @@ body.sc {
 		left: 0;
 		z-index: 20;
 		text-align: left;
-		background-color: #EEE;
+		background-color: $sc_orange;
 		display: none;
-		border-top: 5px solid #FFF;
+		border: 2px solid black;
 		ul {
 			margin: 0;
 		}
@@ -70,7 +91,7 @@ body.sc {
 			display: block;
 			padding: 10px;
 			width: 100%;
-			border-bottom: 2px solid #DDD;
+			border-bottom: 2px solid black;
 			&:last-child {
 				border: none;
 			}
@@ -89,20 +110,31 @@ body.sc {
 	.header {
 		width: 100%;
 		text-align: center;
-		margin-top: 30px;
+		padding-top: 5px;
 		nav.head-links {
 			float: none;
-			margin: 10px 0 30px;
+			margin: 25px 0;
 		}
 		.logo {
 			float: none;
-			padding: 0;
-			font-size: 40px;
+			img {
+				height: 130px;
+				padding: 0;
+			}
+			.subTitle {
+				display: block;
+				margin-top: 20px;
+				color: #FFF;
+				font-weight: 300;
+				font-size: 22px;
+				border: 2px dashed #FFF;
+				border-width: 1px 0;
+			}
 		}
 		nav.head-links {
 			padding: 0;
 			.dropdown-menu {
-				left: 0;
+				left: -2px;
 				right: initial;
 			}
 		}
