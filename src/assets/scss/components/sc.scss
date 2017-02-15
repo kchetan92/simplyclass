@@ -139,25 +139,8 @@ $sc_orange : #d1a562;
 			}
 		}
 	}
-	.fpslider {
-		.orbit-container {
-			height: 300px;
-			img.contain {
-				height: 300px;
-				width: auto;
-			}
-		}
-		.orbit-bullets {
-			button {
-				width: 0.7rem;
-				height: 0.7rem;
-			}
-		}
-		.orbit-caption {
-			@include breakpoint(small down) {
-				padding: 0.2rem 1rem;
-			}
-		}
+	.block-text {
+		padding-top: 40px;
 	}
 }
 
