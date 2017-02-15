@@ -173,6 +173,10 @@ $sc_orange : #d1a562;
 	}
 	.grey {
 		background-color: #EEE;
+		.section-image {
+			background-color: #FFF;
+			text-align: center;
+		}
 	}
 	@include breakpoint(small down) {
 		section {
@@ -182,6 +186,8 @@ $sc_orange : #d1a562;
 	.white {
 		.section-image {
 			border-color: #EEE;
+			background-color: #EEE;
+			text-align: center;
 		}
 		.section-text {
 			@include breakpoint(medium up) {
@@ -197,7 +203,12 @@ $sc_orange : #d1a562;
 		padding: 0;
 	}
 	.section-text {
-		padding: 30px 50px 0;
+		padding: 50px 50px 0;
+		p {
+			padding-top: 30px;
+			font-weight: bold;
+		}
+		font-size: 20px;
 		@include breakpoint(small down) {
 			padding-top: 0;
 		}
@@ -211,7 +222,7 @@ $sc_orange : #d1a562;
 }
 
 .antique-title {
-    padding-top: 20px;
+    padding: 20px 0 10px;
     border-color: #000;
     text-align: center;
     text-transform: capitalize;
@@ -230,4 +241,12 @@ $sc_orange : #d1a562;
 		font-variant: small-caps;
 		font-family: 'Arapey', serif;
     }
+}
+
+.carousel {
+	padding: 20px 0;
+	.orbit-bullets button {
+		width: 0.8rem;
+    	height: 0.8rem;
+	}
 }
