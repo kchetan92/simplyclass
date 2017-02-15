@@ -209,3 +209,25 @@ $sc_orange : #d1a562;
 		}
 	}
 }
+
+.antique-title {
+    padding-top: 20px;
+    border-color: #000;
+    text-align: center;
+    text-transform: capitalize;
+    hr {
+    	margin: 0;
+    	border-width: 2px;
+    	max-width: 100%;
+    	border-color: #000;
+    }
+    h2.title {
+		padding: 3px 0;
+		margin-top: 4px;
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: #c0c0c0;
+		font-variant: small-caps;
+		font-family: 'Arapey', serif;
+    }
+}
