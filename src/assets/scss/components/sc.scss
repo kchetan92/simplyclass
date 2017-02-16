@@ -5,6 +5,7 @@ body.sc {
 	max-width: initial;
 }
 $sc_orange : #d1a562;
+$sc_green : #3e594d;
 .header {
 	background-color: $sc_orange;
 	&:after {
@@ -13,13 +14,13 @@ $sc_orange : #d1a562;
 		clear: both;
 	}
 	a {
-		color: #000;
+		color: $sc_green;
 		text-decoration: none;
 		&:hover {
-			color: #000;
+			color: $sc_green;
 		}
 		&:visited {
-			color: #000;
+			color: $sc_green;
 		}
 	}
 	.logo {
@@ -43,17 +44,17 @@ $sc_orange : #d1a562;
 				font-weight: 500;
 				cursor: pointer;
 				position: relative;
-				border: 2px solid black;
+				border: 2px solid $sc_green;
 				margin: 0 5px;
 				&:hover {
-					background-color: black;
+					background-color: $sc_green;
 					a {
 						color: white;
 					}
 					.dropdown-menu {
 						display: block;
 						a {
-							color: black;
+							color: $sc_green;
 						}
 						li {
 							&:hover {
@@ -83,7 +84,7 @@ $sc_orange : #d1a562;
 		text-align: left;
 		background-color: $sc_orange;
 		display: none;
-		border: 2px solid black;
+		border: 2px solid $sc_green;
 		ul {
 			margin: 0;
 		}
@@ -91,13 +92,13 @@ $sc_orange : #d1a562;
 			display: block;
 			padding: 10px;
 			width: 100%;
-			border-bottom: 2px solid black;
+			border-bottom: 2px solid $sc_green;
 			&:last-child {
 				border: none;
 			}
 			&:hover {
-				border-color: #000;
-				background-color: #000;
+				border-color: $sc_green;
+				background-color: $sc_green;
 				a {
 					color: #FFF;
 				}
