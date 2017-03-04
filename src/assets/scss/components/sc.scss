@@ -87,6 +87,7 @@ $sc_green : #3e594d;
 		border: 2px solid $sc_green;
 		ul {
 			margin: 0;
+			padding: 0;
 		}
 		li {
 			display: block;
@@ -152,55 +153,31 @@ $sc_green : #3e594d;
 }
 
 .showcase {
-	h3 {
-		font-family: 'Raleway', sans-serif;
-	}
-	.grey {
-		background-color: #EEE;
-		.section-image {
-			background-color: #FFF;
-			text-align: center;
-		}
-	}
-	@include breakpoint(small down) {
-		section {
-			margin-bottom: 40px;
-		}
-	}
-	.white {
-		.section-image {
-			border-color: #EEE;
-			background-color: #EEE;
-			text-align: center;
-		}
-		.section-text {
-			@include breakpoint(medium up) {
-				padding-left: 0;
-				padding-right: 100px
-			}
-		}
-	}
-	.section-image {
-		border: 10px solid #FFF;
-		margin-top: 40px;
-		margin-bottom: 40px;
-		padding: 0;
-	}
-	.section-text {
-		padding: 50px 50px 0;
-		p {
-			padding-top: 30px;
-			font-weight: bold;
-		}
-		font-size: 20px;
-		@include breakpoint(small down) {
-			padding-top: 0;
-		}
+	.entry {
+		text-align: center;
+		padding: 30px 0;
 		.title {
-			@include breakpoint(small down) {
-				text-align: center;
+			width: 100%;
+			font-size: 20px;
+			margin-bottom: 30px;
+			font-weight: 500;
+		}
+		.pictures {
+			width: 100%;
+			img {
+				background-color: #FFF;	
+				max-width: 70%;
+				height: auto;
+				padding: 30px;
+				margin: 0 0 30px;
+				border: 2px solid #000;
 			}
-			font-weight: 700;
+		}
+		&:nth-child(odd) {
+		background-color: #EEE
+		}
+		&:nth-child(even) {
+			background-color: #FFF;
 		}
 	}
 }
