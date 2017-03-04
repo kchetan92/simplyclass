@@ -14,6 +14,13 @@ $(document).ready(function(){
 
 	function highResLoader(imgArray){
 		var arr = imgArray;
+		$.each(arr, function(key, value) {
+			arr[key] = {
+				el: arr[key],
+				lowRes : true
+			}
+		});
+
 		var windowHeight = window.innerHeight;
 		function checkVisible(element) {
 			if(!element) {
@@ -49,20 +56,20 @@ $(document).ready(function(){
 		}
 		setInterval(function(){
 			$.each(arr, function(key, value){
-				if(checkVisible(value)) {
-					
-					var check = (function(value){
+				if(value.lowRes && checkVisible(value.el)) {
+					var check = (function(value, key, arr){
 						return function(){
-							if(checkVisible(value)) {
-								highResElement(value);
-								console.log('removed, ', value.getAttribute('src'));
+							if(checkVisible(value.el)) {
+								highResElement(value.el);
+								value.lowRes = false;
+								console.log('removed, ', value.el.getAttribute('src'));
 							}
 						}
 					})(value);
-					setTimeout(check, 200);
+					setTimeout(check, 150);
 				}
 			})
-		}, 500);
+		}, 300);
 	}
 
 	highResLoader($('img.upgrade'));
