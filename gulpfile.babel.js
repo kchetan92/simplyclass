@@ -26,7 +26,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, favicon), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -43,6 +43,12 @@ function clean(done) {
 function copy() {
   return gulp.src(PATHS.assets)
     .pipe(gulp.dest(PATHS.dist + '/assets'));
+}
+
+// Copy favicon from the favicon folder and place it in the root directory
+function favicon() {
+  return gulp.src(PATHS.favicon)
+    .pipe(gulp.dest(PATHS.dist + '/'));
 }
 
 // Copy page templates into finished HTML files
