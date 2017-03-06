@@ -154,6 +154,7 @@ $sc_green : #3e594d;
 
 .showcase {
 	.entry {
+		display: none;
 		text-align: center;
 		padding: 30px 0;
 		.title {
@@ -173,10 +174,10 @@ $sc_green : #3e594d;
 				border: 2px solid #000;
 			}
 		}
-		&:nth-child(odd) {
+		&:nth-child(even) {
 		background-color: #EEE
 		}
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			background-color: #FFF;
 		}
 	}

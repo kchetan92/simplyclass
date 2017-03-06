@@ -8,10 +8,20 @@ $(document).imagesLoaded()
 		}
 	});
 $(document).ready(function(){
+
+	if($('.showcase').length) {
+		var hash = location.hash;
+		if(hash === '' && !($(hash).length)) {
+			$('.entry').show();
+		}	else {
+			$(hash).show();
+			$('.entry:not(' + hash + ')').remove();
+		}
+	}
+
 	$.each($('img[data-src]'), function(key, value) {
 		$(value).attr('src', $(value).attr('data-src'));
 	});
-
 	function highResLoader(imgArray){
 		var arr = imgArray;
 		$.each(arr, function(key, value) {
@@ -71,6 +81,5 @@ $(document).ready(function(){
 			})
 		}, 300);
 	}
-
 	highResLoader($('img.upgrade'));
 })
