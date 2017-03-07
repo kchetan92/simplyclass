@@ -9,15 +9,24 @@ $(document).imagesLoaded()
 	});
 $(document).ready(function(){
 
-	if($('.showcase').length) {
+	function showEntry() {
 		var hash = location.hash;
 		if(hash === '' && !($(hash).length)) {
 			$('.entry').show();
 		}	else {
+			$('.entry').show();
 			$(hash).show();
-			$('.entry:not(' + hash + ')').remove();
+			$('.entry:not(' + hash + ')').hide();
 		}
 	}
+
+	if($('.showcase').length) {
+		showEntry();
+	}
+
+	$(window).on('hashchange', function() {
+	  showEntry();
+	});
 
 	$.each($('img[data-src]'), function(key, value) {
 		$(value).attr('src', $(value).attr('data-src'));
